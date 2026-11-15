@@ -4,17 +4,27 @@ title: Blogs
 permalink: /blogs/
 ---
 
-Welcome to my machine learning blog!
+# Machine Learning Blog
 
-Here, I document what I'm learning about
-machine learning, mathematics, and AI research.
+Welcome to my blog!
+
+I write about the mathematics, algorithms,
+and ideas behind machine learning.
+
+My posts include mathematical derivations,
+implementations, paper reviews, and experiments.
+
+---
 
 ## All Posts
 
-{% if site.posts.size > 0 %}
 {% for post in site.posts %}
-- [{{ post.title }}]({{ post.url | relative_url }}) — {{ post.date | date: "%B %-d, %Y" }}
+### [{{ post.title }}]({{ post.url | relative_url }})
+
+{{ post.date | date: "%B %d, %Y" }}
+
+{{ post.excerpt | strip_html | truncatewords: 35 }}
+
+---
+
 {% endfor %}
-{% else %}
-My first post is coming soon!
-{% endif %}
