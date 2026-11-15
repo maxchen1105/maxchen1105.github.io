@@ -1,0 +1,12 @@
+title: Max Chen
+description: Exploring mathematics, computer science, and machine learning
+
+url: "https://maxchen1105.github.io"
+baseurl: ""
+
+theme: minima
+markdown: kramdown
+
+header_pages:
+  - index.md
+  - blogs.md
