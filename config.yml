@@ -1,0 +1,8 @@
+title: Max Chen
+description: Personal website and machine learning blog
+
+theme: minima
+
+header_pages:
+  - index.md
+  - blogs.md
