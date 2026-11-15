@@ -1,22 +1,38 @@
 ---
-layout: home
-title: Home
+layout: page
+title: Introduction
 ---
 
-# Hi, I'm Max!
+## Hi, I'm Max!
 
-Welcome to my machine learning blog.
+Welcome to my personal website!
 
-I'm interested in machine learning, deep learning,
-and understanding the mathematics behind AI.
+I'm interested in computer science, mathematics,
+and machine learning.
 
-Here, I'll share weekly notes on:
+## About Me
 
-- Machine learning concepts and mathematical foundations
-- Deep learning architectures
-- Research papers I'm reading
-- My own implementations and experiments
+I'm currently exploring deep learning, neural
+networks, and the mathematical foundations of AI.
 
-## Blog Posts
+## Research Interests
 
-Coming soon!
+- Machine Learning
+- Deep Learning
+- Mathematics and Optimization
+- Computer Vision
+
+## Achievements
+
+### Mathematics
+- [Add math competition achievements]
+
+### Computer Science
+- [Add programming competition achievements]
+
+### Other Achievements
+- [Add other awards and accomplishments]
+
+## Contact
+
+- GitHub: [maxchen1105](https://github.com/maxchen1105)
