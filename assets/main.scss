@@ -1,35 +1,3 @@
----
----
-
-$background-color: #f8f9f6;
-$text-color: #344b53;
-$brand-color: #356b61;
-
-@import "minima";
-
-body {
-  background: #f8f9f6;
-  color: #344b53;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.65;
-}
-.wrapper { max-width: 960px; padding-left: 28px; padding-right: 28px; }
-.page-content { padding: 48px 0 72px; }
-
-.site-header {
-  background: #f8f9f6;
-  border-top: 3px solid #8bac9f;
-  border-bottom: 1px solid #dce5de;
-}
-.site-title, .site-title:visited { color: #243d36; font-weight: 650; letter-spacing: -0.5px; }
-.site-nav { background: #f8f9f6; border-color: #dce5de; }
-.site-nav .page-link { color: #344b53; font-size: 15px; }
-
-h1, h2, h3, h4 { color: #243d36; font-weight: 650; line-height: 1.2; }
-h1 { font-size: 3.2rem; letter-spacing: -1.8px; margin-bottom: 22px; }
-h2 { font-size: 1.65rem; letter-spacing: -0.5px; margin-bottom: 22px; }
-h3 { font-size: 1.2rem; margin-bottom: 12px; }
 p { margin-bottom: 20px; }
 a, a:visited { color: #356b61; text-decoration: underline; text-underline-offset: 4px; }
 a:hover { color: #214b42; }
@@ -100,4 +68,61 @@ img { max-width: 100%; height: auto; }
   .home-section { margin-top: 36px; }
   .focus-grid { grid-template-columns: 1fr; }
   .focus-card { padding: 22px; }
+}
+
+// Blog archive: category legend, dates, and softly highlighted titles.
+// Scoped to this page so the homepage and individual posts keep their styles.
+.blog-archive { padding: 8px 0 24px; }
+.blog-archive-header { margin-bottom: 38px; }
+.blog-archive-header h1 { font-size: 2rem; letter-spacing: -0.8px; margin: 0 0 10px; }
+.blog-archive-header p { color: #58665f; font-size: 0.95rem; margin: 0; }
+.blog-archive-layout { display: grid; grid-template-columns: 130px minmax(0, 1fr); column-gap: 40px; align-items: start; }
+.blog-legend { padding-top: 7px; }
+.blog-legend ul, .blog-posts { list-style: none; margin: 0; padding: 0; }
+.blog-legend ul { display: flex; flex-direction: column; gap: 24px; }
+.blog-legend li { display: flex; align-items: center; gap: 11px; color: #526158; font-size: 0.8rem; }
+.blog-swatch { width: 14px; height: 14px; flex: 0 0 14px; border: 1px solid; }
+.blog-swatch--technical { background: #dce8f7; border-color: #a3bbda; }
+.blog-swatch--reflection { background: #f8e9c5; border-color: #d9bc7d; }
+.blog-swatch--article { background: #e6def4; border-color: #baabd2; }
+.blog-post { display: grid; grid-template-columns: 94px minmax(0, 1fr); gap: 16px; align-items: start; margin: 0 0 21px; }
+.blog-post:last-child { margin-bottom: 0; }
+.blog-post-date { color: #59665f; font-family: Georgia, "Times New Roman", serif; font-size: 0.8rem; font-variant-numeric: tabular-nums; line-height: 1.6; padding-top: 8px; white-space: nowrap; }
+.blog-post-detail { min-width: 0; }
+.blog-post--technical { --entry-background: #edf3fb; --entry-accent: #a3bbda; }
+.blog-post--reflection { --entry-background: #faf3e2; --entry-accent: #d9bc7d; }
+.blog-post--article { --entry-background: #f2edf8; --entry-accent: #baabd2; }
+.blog-post-title, .blog-post-title:visited {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 5px 10px;
+  background: var(--entry-background);
+  color: #2f4037;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.06rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.blog-post-title:hover { color: #1d3428; box-shadow: inset 0 -2px 0 var(--entry-accent); }
+.blog-post-title:focus-visible { outline: 2px solid #356b61; outline-offset: 4px; }
+.blog-post-kind { display: block; margin: 4px 10px 0; color: #59665f; font-size: 0.65rem; line-height: 1.5; }
+.blog-empty { border-top: 1px solid #dce5de; padding-top: 18px; color: #526158; }
+.blog-empty p { margin-bottom: 12px; }
+.blog-empty a { font-size: 0.9rem; }
+
+@media screen and (max-width: 700px) {
+  .blog-archive-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .blog-archive-header { margin-bottom: 22px; }
+  .blog-legend { padding-top: 0; padding-bottom: 18px; border-bottom: 1px solid #dce5de; }
+  .blog-legend ul { flex-direction: row; flex-wrap: wrap; gap: 12px 22px; }
+  .blog-post { grid-template-columns: 82px minmax(0, 1fr); gap: 10px; }
+  .blog-post-date { font-size: 0.72rem; }
+}
+
+@media screen and (max-width: 420px) {
+  .blog-post { grid-template-columns: minmax(0, 1fr); gap: 5px; margin-bottom: 24px; }
+  .blog-post-date { padding-top: 0; }
 }
