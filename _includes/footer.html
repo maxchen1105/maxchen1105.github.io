@@ -1,3 +1,9 @@
-© {{ 'now' | date: '%Y' }} {{ site.title | escape }}
-
-Writing GitHub
+<footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title | escape }}</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="{{ '/blogs/' | relative_url }}">Writing</a>
+      <a href="https://github.com/maxchen1105">GitHub</a>
+    </nav>
+  </div>
+</footer>
