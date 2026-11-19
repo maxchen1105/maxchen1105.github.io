@@ -3,11 +3,14 @@ layout: default
 title: Blogs
 permalink: /blogs/
 ---
+
 <section class="blog-archive" aria-labelledby="blog-heading">
   <header class="blog-archive-header">
     <h1 id="blog-heading">Blog</h1>
     <p>Notes on mathematics, code, and machine learning.</p>
-  </header>  <div class="blog-archive-layout">
+  </header>
+
+  <div class="blog-archive-layout">
     <aside class="blog-legend" aria-label="Post categories">
       <ul role="list">
         <li><span class="blog-swatch blog-swatch--technical" aria-hidden="true"></span>Technical</li>
@@ -36,8 +39,8 @@ permalink: /blogs/
     </ul>
     {% else %}
     <div class="blog-empty">
-      <p>No posts yet. New writing will appear here as I publish it.</p>
-      <a href="https://github.com/maxchen1105">Find my code on GitHub <span aria-hidden="true">↗</span></a>
+      <p>No posts yet.</p>
+      <a href="https://github.com/maxchen1105">Find my code on GitHub</a>
     </div>
     {% endif %}
   </div>
