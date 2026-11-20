@@ -25,7 +25,14 @@
       </div>
     </header>
     <main class="page-content" id="content" tabindex="-1">
-      <div class="wrapper">{{ content }}</div>
+      <div class="wrapper">
+        {% if page.collection == 'posts' %}
+          <nav class="post-navigation" aria-label="Blog navigation">
+            <a class="primary-link" href="{{ '/blogs/' | relative_url }}">Back to all blogs</a>
+          </nav>
+        {% endif %}
+        {{ content }}
+      </div>
     </main>
     {% include footer.html %}
     <script defer src="{{ '/assets/particles.js' | relative_url }}"></script>
